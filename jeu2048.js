@@ -51,7 +51,6 @@ function deplacementFleche(evenement){
 		bas();
 		changementCouleur();
 	}
-	remplirCaseVide();
 };  
 
 /////////////////////////////////////// Deplacement ///////////////////////////////////////
@@ -222,12 +221,14 @@ function deplacementCase(valeur_1, valeur_2, valeur_3, valeur_4){
 				else if (valeurCellule_1.innerHTML !== " "){
 					valeurCellule_4.innerHTML = +valeurCellule_1.innerHTML;
 					valeurCellule_1.innerHTML = " ";
+					remplirCaseVide();
 				}
 			}
 			else if (valeurCellule_2.innerHTML !== " "){
 				if (valeurCellule_1.innerHTML === " "){
 					valeurCellule_4.innerHTML = +valeurCellule_2.innerHTML;
 					valeurCellule_2.innerHTML = " ";
+					remplirCaseVide();
 				}
 				else if (valeurCellule_1.innerHTML !== " "){
 					if (valeurCellule_2.innerHTML === +valeurCellule_1.innerHTML){
@@ -235,13 +236,14 @@ function deplacementCase(valeur_1, valeur_2, valeur_3, valeur_4){
 						valeurCellule_4.innerHTML = +somme;
 						valeurCellule_2.innerHTML = " ";
 						valeurCellule_1.innerHTML = " ";
-						score += somme;
+						remplirCaseVide();
 					}
 					else{
 						valeurCellule_4.innerHTML = +valeurCellule_2.innerHTML;
 						valeurCellule_3.innerHTML = +valeurCellule_1.innerHTML;
 						valeurCellule_2.innerHTML = " ";
 						valeurCellule_1.innerHTML = " ";
+						remplirCaseVide();
 					}
 				}
 			}
@@ -251,6 +253,7 @@ function deplacementCase(valeur_1, valeur_2, valeur_3, valeur_4){
 				if (valeurCellule_1.innerHTML === " "){
 					valeurCellule_4.innerHTML = +valeurCellule_3.innerHTML;
 					valeurCellule_3.innerHTML = " ";
+					remplirCaseVide();
 				}
 				else if (valeurCellule_1.innerHTML !== " "){
 					if (valeurCellule_3.innerHTML === valeurCellule_1.innerHTML){
@@ -258,11 +261,13 @@ function deplacementCase(valeur_1, valeur_2, valeur_3, valeur_4){
 						valeurCellule_4.innerHTML = +somme ;
 						valeurCellule_3.innerHTML = " ";
 						valeurCellule_1.innerHTML = " ";
+						remplirCaseVide();
 					}
 					else {
 						valeurCellule_4.innerHTML = +valeurCellule_3.innerHTML;
 						valeurCellule_3.innerHTML = +valeurCellule_1.innerHTML;
 						valeurCellule_1.innerHTML = " ";
+						remplirCaseVide();
 					}
 				}
 			}
@@ -273,11 +278,13 @@ function deplacementCase(valeur_1, valeur_2, valeur_3, valeur_4){
 						valeurCellule_4.innerHTML = +somme;
 						valeurCellule_3.innerHTML = " ";
 						valeurCellule_2.innerHTML = " ";
+						remplirCaseVide();
 					}
 					else {
 						valeurCellule_4.innerHTML = +valeurCellule_3.innerHTML;
 						valeurCellule_3.innerHTML = +valeurCellule_2.innerHTML;
 						valeurCellule_2.innerHTML = " ";
+						remplirCaseVide();
 					}
 				}
 				else if (valeurCellule_1.innerHTML !== " "){
@@ -287,6 +294,7 @@ function deplacementCase(valeur_1, valeur_2, valeur_3, valeur_4){
 						valeurCellule_3.innerHTML = +valeurCellule_1.innerHTML;
 						valeurCellule_2.innerHTML = " ";
 						valeurCellule_1.innerHTML = " ";
+						remplirCaseVide();
 					}
 					else if (valeurCellule_2.innerHTML === valeurCellule_1.innerHTML && valeurCellule_2.innerHTML !== valeurCellule_3.innerHTML){
 						somme = +valeurCellule_2.innerHTML + +valeurCellule_1.innerHTML;
@@ -294,12 +302,14 @@ function deplacementCase(valeur_1, valeur_2, valeur_3, valeur_4){
 						valeurCellule_3.innerHTML = +somme;
 						valeurCellule_2.innerHTML = " ";
 						valeurCellule_1.innerHTML = " ";
+						remplirCaseVide();
 					}
 					else {
 						valeurCellule_4.innerHTML = +valeurCellule_3.innerHTML;
 						valeurCellule_3.innerHTML = +valeurCellule_2.innerHTML;
 						valeurCellule_2.innerHTML = +valeurCellule_1.innerHTML;
 						valeurCellule_1.innerHTML = " ";
+						remplirCaseVide();
 					}
 				}
 			}	
@@ -316,10 +326,12 @@ function deplacementCase(valeur_1, valeur_2, valeur_3, valeur_4){
 						somme = +valeurCellule_1.innerHTML + +valeurCellule_4.innerHTML;
 						valeurCellule_4.innerHTML = +somme;
 						valeurCellule_1.innerHTML = " ";
+						remplirCaseVide();
 					}
 					else {
 						valeurCellule_3.innerHTML = +valeurCellule_1.innerHTML;
 						valeurCellule_1.innerHTML = " ";
+						remplirCaseVide();
 					}
 				}
 			}
@@ -329,10 +341,12 @@ function deplacementCase(valeur_1, valeur_2, valeur_3, valeur_4){
 						somme = +valeurCellule_2.innerHTML + +valeurCellule_4.innerHTML;
 						valeurCellule_4.innerHTML = +somme;
 						valeurCellule_2.innerHTML = " ";
+						remplirCaseVide();
 					}
 					else{
 						valeurCellule_3.innerHTML = +valeurCellule_2.innerHTML;
 						valeurCellule_2.innerHTML = " ";
+						remplirCaseVide();
 					}
 				}
 				else if (valeurCellule_1.innerHTML !== " "){
@@ -342,17 +356,20 @@ function deplacementCase(valeur_1, valeur_2, valeur_3, valeur_4){
 						valeurCellule_3.innerHTML = +valeurCellule_1.innerHTML;
 						valeurCellule_2.innerHTML = " ";
 						valeurCellule_1.innerHTML = " ";
+						remplirCaseVide();
 						}
 					else if (valeurCellule_2.innerHTML !== valeurCellule_4.innerHTML && valeurCellule_2.innerHTML === valeurCellule_1.innerHTML){
 						somme = +valeurCellule_2.innerHTML + +valeurCellule_1.innerHTML;
 						valeurCellule_3.innerHTML = +somme;
 						valeurCellule_2.innerHTML = " ";
 						valeurCellule_1.innerHTML = " ";
+						remplirCaseVide();
 					}
 					else {
 						valeurCellule_3.innerHTML = +valeurCellule_2.innerHTML;
 						valeurCellule_2.innerHTML = +valeurCellule_1.innerHTML;
 						valeurCellule_1.innerHTML = " ";
+						remplirCaseVide();
 					}
 				}
 			}
@@ -364,6 +381,7 @@ function deplacementCase(valeur_1, valeur_2, valeur_3, valeur_4){
 						somme = +valeurCellule_3.innerHTML + +valeurCellule_4.innerHTML;
 						valeurCellule_4.innerHTML = +somme;
 						valeurCellule_3.innerHTML = " ";
+						remplirCaseVide();
 					}
 					else {
 						console.log(" ");
@@ -375,16 +393,18 @@ function deplacementCase(valeur_1, valeur_2, valeur_3, valeur_4){
 						valeurCellule_4.innerHTML = +somme;
 						valeurCellule_3.innerHTML = +valeurCellule_1.innerHTML;
 						valeurCellule_1.innerHTML = " ";
-						score += somme;
+						remplirCaseVide();
 					}
 					else if (valeurCellule_3.innerHTML !== valeurCellule_4.innerHTML && valeurCellule_3.innerHTML === valeurCellule_1.innerHTML){
 						somme = +valeurCellule_3.innerHTML + +valeurCellule_1.innerHTML;
 						valeurCellule_3.innerHTML = +somme;
 						valeurCellule_1.innerHTML = " ";
+						remplirCaseVide();
 					}
 					else {
 						valeurCellule_2.innerHTML = +valeurCellule_1.innerHTML;
 						valeurCellule_1.innerHTML = " ";
+						remplirCaseVide();
 					}
 				}
 			}
@@ -395,11 +415,13 @@ function deplacementCase(valeur_1, valeur_2, valeur_3, valeur_4){
 						valeurCellule_4.innerHTML = +somme;
 						valeurCellule_3.innerHTML = valeurCellule_2.innerHTML;
 						valeurCellule_2.innerHTML = " ";
+						remplirCaseVide();
 					}
 					else if (valeurCellule_3.innerHTML !== valeurCellule_4.innerHTML && valeurCellule_2.innerHTML === valeurCellule_3.innerHTML){
 						somme = +valeurCellule_3.innerHTML + +valeurCellule_2.innerHTML;
 						valeurCellule_3.innerHTML = +somme;
 						valeurCellule_2.innerHTML = " ";
+						remplirCaseVide();
 					}
 					else{
 						console.log(" ");
@@ -414,6 +436,7 @@ function deplacementCase(valeur_1, valeur_2, valeur_3, valeur_4){
 							valeurCellule_3.innerHTML = +somme;
 							valeurCellule_2.innerHTML = " ";
 							valeurCellule_1.innerHTML = " ";
+							remplirCaseVide();
 						}
 						else{
 							somme = +valeurCellule_4.innerHTML + +valeurCellule_3.innerHTML;
@@ -421,6 +444,7 @@ function deplacementCase(valeur_1, valeur_2, valeur_3, valeur_4){
 							valeurCellule_3.innerHTML = +valeurCellule_2.innerHTML;
 							valeurCellule_2.innerHTML = +valeurCellule_1.innerHTML;
 							valeurCellule_1.innerHTML = " ";
+							remplirCaseVide();
 						}
 					}
 					else if (valeurCellule_4.innerHTML !== valeurCellule_3.innerHTML){
@@ -429,11 +453,13 @@ function deplacementCase(valeur_1, valeur_2, valeur_3, valeur_4){
 							valeurCellule_3.innerHTML = +somme;
 							valeurCellule_2.innerHTML = +valeurCellule_1.innerHTML;
 							valeurCellule_1.innerHTML = " ";
+							remplirCaseVide();
 						}
 						else if (valeurCellule_1.innerHTML === valeurCellule_2.innerHTML){
 							somme = +valeurCellule_2.innerHTML + +valeurCellule_1.innerHTML;
 							valeurCellule_2.innerHTML = +somme;
 							valeurCellule_1.innerHTML = " ";
+							remplirCaseVide();
 						}
 						else{
 							console.log(" ");
